@@ -1,0 +1,205 @@
+.float {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+    -webkit-animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes float {
+    0% {
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+    50% {
+        -webkit-transform: translatey(-20px);
+        transform: translatey(-20px);
+    }
+    100% {
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+}
+
+@keyframes float {
+    0% {
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+    50% {
+        -webkit-transform: translatey(-20px);
+        transform: translatey(-20px);
+    }
+    100% {
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+}
+
+.vinda_nav.active {
+    animation: slidedown_menu 1s;
+    top: 80px;
+    transition: all 1s;
+    -webkit-animation: slidedown_menu 1s;
+}
+
+@keyframes slidedown_menu {
+    from {
+        top: 0px;
+        opacity: 0
+    }
+    to {
+        top: 80px;
+        opacity: 1
+    }
+}
+
+.slidedown {
+    animation: slidedown 1s
+}
+
+@keyframes slidedown {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.slideup {
+    animation: slideup 1s
+}
+
+@keyframes slideup {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+.bottomline_left_lightblue {
+    display: inline-block;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+}
+
+.bottomline_left_lightblue:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 1px;
+    -webkit-transition: right 0.3s ease-out;
+    transition: right 0.3s ease-out;
+    background: #0090cf;
+}
+
+.bottomline_left_lightblue:hover:after {
+    right: 0;
+}
+
+.shine {
+    overflow: hidden;
+}
+
+.shine:after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient( to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0.0) 100%);
+}
+
+.shine.delay1:after {
+    opacity: 1;
+    left: 130%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+    transition-delay: 1s;
+}
+
+.shine.delay2:after {
+    opacity: 1;
+    left: 130%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+    transition-delay: 1.2s;
+}
+
+.shine.delay3:after {
+    opacity: 1;
+    left: 130%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+    transition-delay: 1.4s;
+}
+
+.shine.delay4:after {
+    opacity: 1;
+    left: 130%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+    transition-delay: 1.6s;
+}
+
+
+/* Hover state - trigger effect */
+
+
+/*.shine:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}*/
+
+
+/* Active state */
+
+.shine:active:after {
+    opacity: 0;
+}
+
+.rotation-right {
+    -webkit-animation: rotation-right 5s infinite linear;
+}
+
+.rotation-left {
+    -webkit-animation: rotation-left 5s infinite linear;
+}
+
+@-webkit-keyframes rotation-left {
+    from {
+        -webkit-transform: rotate(359deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes rotation-right {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
